@@ -53,9 +53,7 @@ Total: $75.00\n";
  	expected =
 "GetCreative Brand: Fila\n\
 Accessories:\n\
-socks: 1 quantity\n\
-socks: 1 quantity\n\
-socks: 1 quantity\n\
+socks: 3 quantity\n\
 Price: $45.00\n\
 -----\n\
 GetCreative Brand: Adidas\n\
