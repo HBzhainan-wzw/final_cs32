@@ -21,8 +21,8 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
 
     Matrix res = {};
     //have the result size
-    int nRow = matrix_1.size();
-    int nCol = matrix_2[0].size();
+    size_t nRow = matrix_1.size();
+    size_t nCol = matrix_2[0].size();
     for(size_t i = 0; i < nRow;i++){
         Array row = {};
         for(size_t j = 0; j < nCol; j++){
@@ -60,8 +60,8 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
 
     Matrix res = {};
     //have the result size
-    int nRow = matrix_1.size();
-    int nCol = matrix_2[0].size();
+    size_t nRow = matrix_1.size();
+    size_t nCol = matrix_2[0].size();
 
     Matrix trans = {};
     for(size_t i = 0; i < nRow;i++){
