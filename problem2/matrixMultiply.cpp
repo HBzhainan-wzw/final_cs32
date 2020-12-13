@@ -89,7 +89,7 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
 
 int op(Array ar1, Array ar2){
     int result = 0;
-    for (int i = 0; i < ar1.size(); i++)
+    for (size_t i = 0; i < ar1.size(); i++)
     {
         /* code */
         result += ar1[i]+ar2[i];
@@ -120,7 +120,7 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     Matrix res = {};
     
     size_t nRow = matrix_1.size();
-    size_t nCol = matrix_2[0].size();
+    // size_t nCol = matrix_2[0].size();
 
     
     Matrix trans = {};
