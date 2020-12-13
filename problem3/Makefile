@@ -8,7 +8,7 @@ BINARIES=testFootwearOrder
 
 all: ${BINARIES}
 
-testFootwearOrder: testFootwearOrder.o FootwearOrder.o FootwearItem.o GetCreative .o PreMadeDeal.o tddFuncs.o
+testFootwearOrder: testFootwearOrder.o FootwearOrder.o FootwearItem.o GetCreative.o PreMadeDeal.o tddFuncs.o
 	${CXX} $^ -o $@
 
 clean:
