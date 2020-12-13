@@ -17,8 +17,8 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
     }
 
     // cannot multiply
-    cout<<"m1:" << matrix_1.size() << "  "<< matrix_1[0].size()<<endl;
-    cout<<"m2:" << matrix_2.size() << "  "<< matrix_2[0].size()<<endl;
+    cout<<"m1:" << matrix_1.size() << " x "<< matrix_1[0].size()<<endl;
+    cout<<"m2:" << matrix_2.size() << " x "<< matrix_2[0].size()<<endl;
 
 
 
@@ -70,10 +70,12 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
     size_t nRow = matrix_1.size();
     size_t nCol = matrix_2[0].size();
 
+    cout<<"trans:: --- "<<endl;
+
     Matrix trans = {};
-    for(size_t i = 0; i < nRow;i++){
+    for(size_t i = 0; i < matrix_2[0].size();i++){
         Array temp = {};
-        for (size_t j = 0; j < matrix_2.size(); j++)
+        for (size_t j = 0; j < nRow; j++)
         {
             temp.push_back(matrix_2[j][i]);
         }
