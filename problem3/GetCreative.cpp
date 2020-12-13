@@ -35,7 +35,7 @@ void GetCreative::addAccessory(std::string Accessory){
 }
 string GetCreative::composeItem(){
 	string output = "";
-	output+= "GetCreative Brand:";
+	output+= "GetCreative Brand: ";
 	output+= this->brand;
 	output+= "\nAccessories:\n";
 	for(map<string, int>::iterator i = this->Accessory.begin();i!= this->Accessory.end();i++){
