@@ -163,12 +163,13 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
         trans.push_back(temp);
     }    
     for (size_t i = 0; i < nRow; i++) {
-        Array tempM = {};
+        Matrix tempM = {};
+        Array model(nCol,0);
         for (size_t j = 0; j < nCol; j++){
-            tempM.push_back(matrix_1[i][i]);
+            tempM.push_back(matrix_1[i]);
         }
-        res.push_back(tempM);
-        transform(tempM.begin(), tempM.end(), trans[i].begin(), res[i].begin(), op);
+        res.push_back(model);
+        transform(tempM.begin(), tempM.end(), trans.begin(), res[i].begin(), op);
     }
     return res;
 }
