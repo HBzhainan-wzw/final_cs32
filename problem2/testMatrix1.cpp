@@ -42,7 +42,7 @@ int main() {
 	ASSERT_EQUALS(true, caughtException);
 	caughtException = false;
 
-
+  cout<<"testing empty"<<endl<<matrix_6.empty()<<endl;
 	try {
     matrix_3 = matrixMultiply1(matrix_4, matrix_6);		
 	} catch (invalid_argument e) {
