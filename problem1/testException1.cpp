@@ -49,6 +49,7 @@ int main()
 		outofIndex = true;
 		//std::cout<<"\nArray is not sorted!";
 	}
+	cout << binarySearch(arr3, 0, 6, 6)<<endl;
 	ASSERT_EQUALS(true, outofIndex);
 	outofIndex=0;
 
