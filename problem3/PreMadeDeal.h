@@ -5,7 +5,6 @@ using namespace std;
 
 class PreMadeDeal: public FootwearItem{
     public:
-        string name;
         PreMadeDeal(string name, string brand);
         virtual ~PreMadeDeal ();
 		virtual string composeItem();
