@@ -17,8 +17,8 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
     }
 
     // cannot multiply
-    cout<<"m1:" << matrix_1.size() << " x "<< matrix_1[0].size()<<endl;
-    cout<<"m2:" << matrix_2.size() << " x "<< matrix_2[0].size()<<endl;
+    // cout<<"m1:" << matrix_1.size() << " x "<< matrix_1[0].size()<<endl;
+    // cout<<"m2:" << matrix_2.size() << " x "<< matrix_2[0].size()<<endl;
 
 
 
@@ -46,7 +46,7 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
 
 // Part 2
 Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
-    cout << "Mply 2"<<endl;
+    // cout << "Mply 2"<<endl;
     
     //empty
     if(matrix_1.empty()){throw invalid_argument("-1");}
@@ -70,19 +70,19 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
     size_t nRow = matrix_1.size();
     size_t nCol = matrix_2[0].size();
 
-    cout<<"trans:: --- "<<endl;
+    // cout<<"trans:: --- "<<endl;
 
-    // 
-    for(size_t i = 0; i < matrix_2.size();i++){
-        for (size_t j = 0; j < matrix_2[0].size(); j++)
-        {
-            cout<<matrix_2[i][j];
-        }
-        cout<<endl;
-    }
-    //
+    // // 
+    // for(size_t i = 0; i < matrix_2.size();i++){
+    //     for (size_t j = 0; j < matrix_2[0].size(); j++)
+    //     {
+    //         cout<<matrix_2[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    // //
 
-    cout<< " ..." << endl;
+    // cout<< " ..." << endl;
 
     Matrix trans = {};
     for(size_t i = 0; i < matrix_2[0].size();i++){
@@ -93,15 +93,15 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
         }
         trans.push_back(temp);
     }   
-    // 
-    for(size_t i = 0; i < trans.size();i++){
-        for (size_t j = 0; j < trans[0].size(); j++)
-        {
-            cout<<trans[i][j];
-        }
-        cout<<endl;
-    }
-    //
+    // // 
+    // for(size_t i = 0; i < trans.size();i++){
+    //     for (size_t j = 0; j < trans[0].size(); j++)
+    //     {
+    //         cout<<trans[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    // //
     for(size_t i = 0; i < nRow;i++){
         Array row = {};
         for(size_t j = 0; j < nCol; j++){
@@ -121,10 +121,10 @@ int op(Array ar1, Array ar2){
     for (size_t i = 0; i < ar1.size(); i++)
     {
         /* code */
-        int temp = result;
+        // int temp = result;
         result += ar1[i]*ar2[i];
-        cout << temp << " + " << ar1[i] << " + " << ar2[i] << " = "  <<result;
-        cout<<endl; 
+        // cout << temp << " + " << ar1[i] << " + " << ar2[i] << " = "  <<result;
+        // cout<<endl; 
     }
     return result;
 
@@ -156,24 +156,24 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     size_t nCol = matrix_2[0].size();
 
     
-    //
-    cout<<"m1: "<<endl; 
-    for(size_t i = 0; i < matrix_1.size();i++){
-        for (size_t j = 0; j < matrix_1[0].size(); j++)
-        {
-            cout<<matrix_1[i][j];
-        }
-        cout<<endl;
-    }
-    cout<<"m2: "<<endl; 
-    for(size_t i = 0; i < matrix_2.size();i++){
-        for (size_t j = 0; j < matrix_2[0].size(); j++)
-        {
-            cout<<matrix_2[i][j];
-        }
-        cout<<endl;
-    }
-    //
+    // //
+    // cout<<"m1: "<<endl; 
+    // for(size_t i = 0; i < matrix_1.size();i++){
+    //     for (size_t j = 0; j < matrix_1[0].size(); j++)
+    //     {
+    //         cout<<matrix_1[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    // cout<<"m2: "<<endl; 
+    // for(size_t i = 0; i < matrix_2.size();i++){
+    //     for (size_t j = 0; j < matrix_2[0].size(); j++)
+    //     {
+    //         cout<<matrix_2[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    // //
 
 
     
@@ -186,16 +186,16 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
         }
         trans.push_back(temp);
     }
-    //
-    cout<<"trans: "<<endl; 
-    for(size_t i = 0; i < trans.size();i++){
-        for (size_t j = 0; j < trans[0].size(); j++)
-        {
-            cout<<trans[i][j];
-        }
-        cout<<endl;
-    }
-    //
+    // //
+    // cout<<"trans: "<<endl; 
+    // for(size_t i = 0; i < trans.size();i++){
+    //     for (size_t j = 0; j < trans[0].size(); j++)
+    //     {
+    //         cout<<trans[i][j];
+    //     }
+    //     cout<<endl;
+    // }
+    // //
 
 
     for (size_t i = 0; i < nRow; i++) {
