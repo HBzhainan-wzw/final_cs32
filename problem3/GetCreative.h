@@ -11,11 +11,12 @@ class GetCreative: public FootwearItem{
 		GetCreative(string brand);
 		virtual ~GetCreative();
 		void addAccessory(string Accessory);
-		string composeItem();
-		double getPrice();
+		virtual string composeItem();
+		virtual double getPrice();
 	private:
-		int hasAccessory(string Accessory);
 		map<string, int> Accessory;
+		string brand;
+		int price;
 
 };
 
