@@ -105,7 +105,7 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
     for(size_t i = 0; i < nRow;i++){
         Array row = {};
         for(size_t j = 0; j < nCol; j++){
-            size_t mul = inner_product(matrix_1[i].begin(),matrix_1[i].end(), trans[i].begin(),0);
+            size_t mul = inner_product(matrix_1[i].begin(),matrix_1[i].end(), trans[j].begin(),0);
             row.push_back(mul);
         }
         res.push_back(row);
@@ -148,7 +148,7 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     
     Matrix res = {};
     
-    size_t nRow = matrix_1[0].size();
+    size_t nRow = matrix_1.size();
     // size_t nCol = matrix_2[0].size();
 
     
