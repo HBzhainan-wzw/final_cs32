@@ -153,6 +153,27 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     size_t nCol = matrix_2[0].size();
 
     
+    //
+    cout<<"m1: "<<endl; 
+    for(size_t i = 0; i < matrix_1.size();i++){
+        for (size_t j = 0; j < matrix_1[0].size(); j++)
+        {
+            cout<<matrix_1[i][j];
+        }
+        cout<<endl;
+    }
+    cout<<"m2: "<<endl; 
+    for(size_t i = 0; i < matrix_2.size();i++){
+        for (size_t j = 0; j < matrix_2[0].size(); j++)
+        {
+            cout<<matrix_2[i][j];
+        }
+        cout<<endl;
+    }
+    //
+
+
+    
     Matrix trans = {};
     for(size_t i = 0; i < matrix_2[0].size();i++){
         Array temp = {};
@@ -161,7 +182,19 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
             temp.push_back(matrix_2[j][i]);
         }
         trans.push_back(temp);
-    }    
+    }
+    //
+    cout<<"trans: "<<endl; 
+    for(size_t i = 0; i < trans.size();i++){
+        for (size_t j = 0; j < trans[0].size(); j++)
+        {
+            cout<<trans[i][j];
+        }
+        cout<<endl;
+    }
+    //
+
+
     for (size_t i = 0; i < nRow; i++) {
         Matrix tempM = {};
         Array model(nCol,0);
