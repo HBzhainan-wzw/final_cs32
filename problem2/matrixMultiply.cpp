@@ -146,14 +146,15 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     // cannot multiply
     if(matrix_1[0].size()!=matrix_2.size()){throw invalid_argument("-1");}  
     
+// start mulp
+
     Matrix res = {};
-    
     size_t nRow = matrix_1.size();
     // size_t nCol = matrix_2[0].size();
 
     
     Matrix trans = {};
-    for(size_t i = 0; i < nRow;i++){
+    for(size_t i = 0; i < matrix_2[0].size();i++){
         Array temp = {};
         for (size_t j = 0; j < matrix_2.size(); j++)
         {
