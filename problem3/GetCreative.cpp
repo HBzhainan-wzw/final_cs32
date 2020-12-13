@@ -51,3 +51,7 @@ string GetCreative::composeItem(){
 	output+="\n";
 	return output;
 }
+
+double GetCreative::getPrice(){
+	return this->price;
+}
