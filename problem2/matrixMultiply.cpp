@@ -150,7 +150,7 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
 
     Matrix res = {};
     size_t nRow = matrix_1.size();
-    // size_t nCol = matrix_2[0].size();
+    size_t nCol = matrix_2[0].size();
 
     
     Matrix trans = {};
@@ -164,7 +164,7 @@ Matrix matrixMultiply3(const Matrix & matrix_1, const Matrix & matrix_2){
     }    
     for (size_t i = 0; i < nRow; i++) {
         Matrix tempM = {};
-        for (size_t j = 0; j < nRow; j++){
+        for (size_t j = 0; j < nCol; j++){
             tempM.push_back(matrix_1[i]);
         }
         res.push_back(Array(nRow,0));
