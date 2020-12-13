@@ -17,6 +17,11 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
     }
 
     // cannot multiply
+    cout<<"m1:" << matrix_1.size() << "  "<< matrix_1[0].size()<<endl;
+    cout<<"m2:" << matrix_2.size() << "  "<< matrix_2[0].size()<<endl;
+
+
+
     if(matrix_1[0].size()!=matrix_2.size()){throw invalid_argument("-1");}    
 
     Matrix res = {};
@@ -41,6 +46,8 @@ Matrix matrixMultiply1(const Matrix & matrix_1, const Matrix & matrix_2){
 
 // Part 2
 Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
+    cout << "Mply 2"<<endl;
+    
     //empty
     if(matrix_1.empty()){throw invalid_argument("-1");}
     if(matrix_1[0].empty()){throw invalid_argument("-1");}
