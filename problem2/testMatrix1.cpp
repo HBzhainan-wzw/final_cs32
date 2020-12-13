@@ -37,7 +37,7 @@ int main() {
 
 
   cout<<"testing exceptions"<<endl;
-  Matrix matrix_4 = {{1,2,3,4}, {4,5,6,6}};
+  Matrix matrix_4 = {{1,2,3}, {4,5,6}};
   Matrix matrix_5 = {{1,2,3,1,1,3}, {4,5,4,2,2,3},{7,8,5,3,3,3},{1,1,1,4,3,3}};
   Matrix matrix_6 = {};
   Matrix matrix_7 = {{1,2,3,1,1,3}, {4,5,4,2,2,3,3},{7,8,5,3,3,3,3},{1,1,1,4,4,3,3}};

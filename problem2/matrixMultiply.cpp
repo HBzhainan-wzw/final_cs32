@@ -71,8 +71,16 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
             temp.push_back(matrix_2[j][i]);
         }
         trans.push_back(temp);
-    }    
-
+    }   
+    // 
+    for(size_t i = 0; i < matrix_2[0].size();i++){
+        for (size_t j = 0; j < matrix_2.size(); j++)
+        {
+            cout<<trans[i][j];
+        }
+        cout<<endl;
+    }
+    //
     for(size_t i = 0; i < nRow;i++){
         Array row = {};
         for(size_t j = 0; j < nCol; j++){
