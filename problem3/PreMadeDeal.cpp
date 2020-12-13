@@ -29,7 +29,7 @@ string PreMadeDeal::composeItem(){
 	output+= this->brand;
     output+= "\nName: ";
     output+= this->name;
-    output+= " Package\n";
+    output+= "\n";
 	output+="Price: $";
 	stringstream ss;
 	ss << fixed << setprecision(2) << this->getPrice();

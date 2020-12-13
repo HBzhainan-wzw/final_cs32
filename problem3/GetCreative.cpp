@@ -7,16 +7,16 @@ using namespace std;
 GetCreative::GetCreative(string brand): FootwearItem(brand){
     this->brand = brand;
     if(brand == "Adidas"){
-        price = 45.00;
+        price = 35.00;
     }
     if(brand == "Nike"){
-        price = 40.00;
+        price = 30.00;
     }
     if(brand == "Fila"){
-        price = 40.0;
+        price = 30.0;
     }
     if(brand == "Skechers"){
-        price = 35.00;
+        price = 25.00;
     }
 
 }
