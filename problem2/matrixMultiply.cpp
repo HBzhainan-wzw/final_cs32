@@ -121,7 +121,9 @@ int op(Array ar1, Array ar2){
     for (size_t i = 0; i < ar1.size(); i++)
     {
         /* code */
+        int temp = result;
         result += ar1[i]+ar2[i];
+        cout << temp << " + " << ar1[i] << " + " << ar2[i] << " = "  <<result; 
     }
     return result;
 
