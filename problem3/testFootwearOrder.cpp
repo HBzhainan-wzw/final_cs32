@@ -12,11 +12,14 @@ int main() {
 	cout << "Running tests from: " << __FILE__ << endl;
 
 	FootwearOrder order1;
-
+	cout<<"line 15"<<endl;
 	PreMadeDeal* item1 = new PreMadeDeal("Nike Package", "Nike");
+	cout<<"line 17"<<endl;
 	order1.addItem(item1);
+	cout<<"line 19"<<endl;
 	GetCreative* item2 = new GetCreative("Nike");
 	item2->addAccessory("socks");
+	cout<<"line 22"<<endl;
 	order1.addItem(item2);
 
 	string expected = 
