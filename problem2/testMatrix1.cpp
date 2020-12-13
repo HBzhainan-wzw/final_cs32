@@ -19,7 +19,7 @@ std::string toString(const Matrix & matrix ){
 int main() {
 
   bool caughtException = false;
-
+  cout<<"testing functions"<<endl;
   Matrix matrix_1 = {{1,2,3,4}, {4,5,6,6},{1,2,3,4}};
   Matrix matrix_2 = {{1,2,3,1,1,3,3}, {4,5,4,2,2,3,3},{7,8,5,3,3,3,3},{1,1,1,4,4,3,3}};
   Matrix matrix_3;
@@ -28,8 +28,17 @@ int main() {
   Matrix expected = {{34, 40, 30, 30, 30, 30, 30},{72, 87, 68, 56, 56, 63, 63},{34, 40, 30, 30, 30, 30, 30}};
   ASSERT_EQUALS(toString(expected), toString(matrix_3));
 
+  matrix_3 = matrixMultiply2(matrix_1, matrix_2);
+  ASSERT_EQUALS(toString(expected), toString(matrix_3));
+  matrix_3 = matrixMultiply3(matrix_1, matrix_2);
+  ASSERT_EQUALS(toString(expected), toString(matrix_3));
+
+
+
+
+  cout<<"testing exceptions"<<endl;
   Matrix matrix_4 = {{1,2,3,4}, {4,5,6,6}};
-  Matrix matrix_5 = {{1,2,3,1,1,3,3}, {4,5,4,2,2,3,3},{7,8,5,3,3,3,3},{1,1,1,4,4,3,3}};
+  Matrix matrix_5 = {{1,2,3,1,1,3}, {4,5,4,2,2,3},{7,8,5,3,3,3},{1,1,1,4,3,3}};
   Matrix matrix_6 = {};
   Matrix matrix_7 = {{1,2,3,1,1,3}, {4,5,4,2,2,3,3},{7,8,5,3,3,3,3},{1,1,1,4,4,3,3}};
 
