@@ -27,11 +27,13 @@ int main()
 	}
 	ASSERT_EQUALS(true, caughtArrayNotSortedException);
 
+
+	// out of index
 	int arr3[] = {1,2,3,4,5,6};
 	try{
 		binarySearch(arr3, -1, n-1, 6);
 	}
-	catch(ArrayNotSortedException e)
+	catch(IndexOutOfBoundsException e)
 	{
 		outofIndex = true;
 		//std::cout<<"\nArray is not sorted!";
@@ -42,7 +44,7 @@ int main()
 	try{
 		binarySearch(arr3, 0, 6, 6);
 	}
-	catch(ArrayNotSortedException e)
+	catch(IndexOutOfBoundsException e)
 	{
 		outofIndex = true;
 		//std::cout<<"\nArray is not sorted!";
@@ -50,10 +52,11 @@ int main()
 	ASSERT_EQUALS(true, outofIndex);
 	outofIndex=0;
 
+	//not found
 	try{
 		binarySearch(arr3, 0, 3, 5);
 	}
-	catch(ArrayNotSortedException e)
+	catch(ElementNotFoundException e)
 	{
 		elementnotFound = true;
 		//std::cout<<"\nArray is not sorted!";
@@ -64,7 +67,7 @@ int main()
 	try{
 		binarySearch(arr3, 0, 3, 8);
 	}
-	catch(ArrayNotSortedException e)
+	catch(ElementNotFoundException e)
 	{
 		elementnotFound = true;
 		//std::cout<<"\nArray is not sorted!";
@@ -72,10 +75,11 @@ int main()
 	ASSERT_EQUALS(true, elementnotFound);
 	elementnotFound=0;
 
+	//invalid index
 	try{
 		binarySearch(arr3, 3, 0, 3);
 	}
-	catch(ArrayNotSortedException e)
+	catch(InvalidIndexException e)
 	{
 		invalidIndex = true;
 		//std::cout<<"\nArray is not sorted!";
