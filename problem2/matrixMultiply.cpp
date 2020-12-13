@@ -122,8 +122,9 @@ int op(Array ar1, Array ar2){
     {
         /* code */
         int temp = result;
-        result += ar1[i]+ar2[i];
-        cout << temp << " + " << ar1[i] << " + " << ar2[i] << " = "  <<result; 
+        result += ar1[i]*ar2[i];
+        cout << temp << " + " << ar1[i] << " + " << ar2[i] << " = "  <<result;
+        cout<<endl; 
     }
     return result;
 
