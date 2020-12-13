@@ -72,6 +72,18 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
 
     cout<<"trans:: --- "<<endl;
 
+    // 
+    for(size_t i = 0; i < matrix_2.size();i++){
+        for (size_t j = 0; j < matrix_2[0].size(); j++)
+        {
+            cout<<matrix_2[i][j];
+        }
+        cout<<endl;
+    }
+    //
+
+    cout<< " ..." << endl;
+
     Matrix trans = {};
     for(size_t i = 0; i < matrix_2[0].size();i++){
         Array temp = {};
@@ -82,8 +94,8 @@ Matrix matrixMultiply2(const Matrix & matrix_1, const Matrix & matrix_2){
         trans.push_back(temp);
     }   
     // 
-    for(size_t i = 0; i < matrix_2[0].size();i++){
-        for (size_t j = 0; j < matrix_2.size(); j++)
+    for(size_t i = 0; i < trans.size();i++){
+        for (size_t j = 0; j < trans[0].size(); j++)
         {
             cout<<trans[i][j];
         }
